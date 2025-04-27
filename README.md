@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZYX Logistics - Sistema de Controle de Cargas e Expedição
 
-## Getting Started
+## Descrição
+Este sistema foi desenvolvido para gerenciar o controle de cargas recebidas e expedições, permitindo adicionar, editar, excluir e gerar relatórios em PDF para o checklist de expedição.
 
-First, run the development server:
+## Funcionalidades
+- **Controle de Cargas:**
+1. Adicionar Carga: Permite registrar uma nova carga com a descrição, data de recebimento e status.
+2. Editar Carga: Permite editar as informações de uma carga existente.
+3. Excluir Carga: Permite excluir uma carga do banco de dados.
 
-```bash
+- **Expedição:**
+1. Adicionar Item de Checklist: Permite adicionar um item de checklist para expedição.
+2. Editar Item de Checklist: Permite editar a descrição e o status de um item do checklist.
+3. Excluir Item de Checklist: Permite excluir um item do checklist de expedição.
+4. Gerar Relatório em PDF: Gera um PDF contendo todos os itens do checklist de expedição com suas descrições e status.
+
+## Tecnologias utilizadas
+- **Frontend:**
+1. Next.js: Framework React para construção da aplicação.
+2. React: Biblioteca para construção da interface.
+3. Axios: Para fazer requisições HTTP para o backend (json-server).
+4. jsPDF: Biblioteca para gerar relatórios em PDF.
+
+- **Backend:**
+1. JSON Server: API falsa (fake API) para armazenar os dados de cargas e checklist no formato JSON.
+
+- **Outras Depedências:**
+1. CSS: Estilização básica usando CSS em módulos.
+2. React Hooks: Para gerenciar o estado e os efeitos colaterais.
+
+## Como Rodar o projeto
+- **Pré-requisitos. Certifique-se de ter os seguintes programas instalados em sua máquina:**
+1. Node.js (Versão 16 ou superior).
+2. npm (gerenciador de pacotes do Node.js) - Vem junto com o Node.js.
+
+- **Passos para Configuração:**
+1. Clone o repositório:
+git clone https://github.com/seu-usuario/zyx-logistics.git
+cd zyx-logistics
+
+2. Instale as dependências do projeto:
+npm install
+
+3. Configuração do Backend (json-server):
+npx json-server --watch db.json --port 5000
+
+4. Iniciar o Frontend:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Endpoints da API (json-server)
+1. GET /cargas: Retorna todas as cargas recebidas.
+2. POST /cargas: Adiciona uma nova carga.
+3. PUT /cargas/:id: Atualiza as informações de uma carga.
+4. DELETE /cargas/:id: Exclui uma carga.
+5. GET /checklist: Retorna todos os itens do checklist de expedição.
+6. POST /checklist: Adiciona um novo item no checklist de expedição.
+7. PUT /checklist/:id: Atualiza as informações de um item do checklist.
+8. DELETE /checklist/:id: Exclui um item do checklist.

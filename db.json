@@ -1,0 +1,40 @@
+{
+  "cargas": [
+    {
+      "id": "10da",
+      "descricao": "dsfsf",
+      "dataRecebimento": "2025-04-01",
+      "status": "fgbgf"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "1",
+      "descricao": "Item 1",
+      "status": "Conferido"
+    },
+    {
+      "id": "2",
+      "descricao": "Item 2",
+      "status": "Conferido"
+    },
+    {
+      "id": "8d05",
+      "descricao": "4313213",
+      "status": "dsdfds",
+      "dataRecebimento": ""
+    },
+    {
+      "id": "806a",
+      "descricao": "ggreg",
+      "status": "6576",
+      "dataRecebimento": ""
+    },
+    {
+      "id": "cf13",
+      "descricao": "teste",
+      "status": "concluido",
+      "dataRecebimento": ""
+    }
+  ]
+}
