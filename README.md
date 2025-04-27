@@ -36,7 +36,7 @@ Este sistema foi desenvolvido para gerenciar o controle de cargas recebidas e ex
 
 - **Passos para Configuração:**
 1. Clone o repositório:
-git clone https://github.com/seu-usuario/zyx-logistics.git
+git clone https://github.com/IagoGoncalves/zyx-logistics.git
 cd zyx-logistics
 
 2. Instale as dependências do projeto:
