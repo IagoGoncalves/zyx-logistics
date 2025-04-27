@@ -1,0 +1,15 @@
+.form{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 20px;
+    input{
+        background-color: transparent;
+        border: 1px solid var(--tertinary-color);
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    button{
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+}

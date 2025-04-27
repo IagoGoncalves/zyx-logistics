@@ -1,4 +1,6 @@
 import React from 'react';
+import './layout.scss';
+import './globals.scss';
 
 export default function Layout({ children }) {
   return (
@@ -14,7 +16,7 @@ export default function Layout({ children }) {
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/home">Controle de Cargas</a></li>
+              <li><a href="/control">Controle de Cargas</a></li>
               <li><a href="/expedition">Expedição</a></li>
             </ul>
           </nav>

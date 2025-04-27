@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Form.scss';
 
 const Form = ({ onSubmit, initialData = {}, buttonLabel, showDateField = false }) => {
   const [descricao, setDescricao] = useState(initialData.descricao || '');
@@ -15,7 +16,6 @@ const Form = ({ onSubmit, initialData = {}, buttonLabel, showDateField = false }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Envia os dados para o onSubmit com o campo de data (se necessário)
     onSubmit({ descricao, status, dataRecebimento });
     setDescricao('');
     setStatus('');
@@ -23,7 +23,7 @@ const Form = ({ onSubmit, initialData = {}, buttonLabel, showDateField = false }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <input
         type="text"
         placeholder="Descrição"
@@ -31,22 +31,22 @@ const Form = ({ onSubmit, initialData = {}, buttonLabel, showDateField = false }
         onChange={(e) => setDescricao(e.target.value)}
         required
       />
-      {/* Campo de data só aparece se showDateField for true */}
       {showDateField && (
         <input
           type="date"
           value={dataRecebimento}
           onChange={(e) => setDataRecebimento(e.target.value)}
+          required
         />
       )}
       <input
         type="text"
-        placeholder="Status"
+        placeholder="Status da carga"
         value={status}
         onChange={(e) => setStatus(e.target.value)}
         required
       />
-      <button type="submit">{buttonLabel}</button>
+      <button type="submit" className='btnDefault'>{buttonLabel}</button>
     </form>
   );
 };

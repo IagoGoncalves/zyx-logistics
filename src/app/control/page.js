@@ -1,8 +1,9 @@
-"use client"; // Ativa o cliente para poder usar hooks no Next.js 13
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Form from '../components/Form';
+import Form from '../components/Form/Form';
+import HeaderList from '../components/HeaderList/HeaderList';
 
 const Home = () => {
   const [cargas, setCargas] = useState([]);
@@ -68,22 +69,25 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <h1>Controle de Cargas Recebidas</h1>
+    <div className="container">
+      <h1 className="pageTitle">Controle de Cargas Recebidas</h1>
       <Form
         onSubmit={editing ? updateCarga : addCarga}
         initialData={editing ? cargas.find(carga => carga.id === editing) : {}}
         buttonLabel={editing ? 'Atualizar Carga' : 'Adicionar Carga'}
-        showDateField={true} // Exibe o campo de data na Home
+        showDateField={true}
       />
 
-      <h2>Cargas Recebidas</h2>
-      <ul>
+      <h2 className='pageTitle'>Cargas Recebidas</h2>
+      <ul className="cargasList">
+        <HeaderList showDate={true}/>
         {cargas.map((carga) => (
           <li key={carga.id}>
-            {carga.descricao} - {carga.dataRecebimento} - {carga.status}
-            <button onClick={() => startEditing(carga)}>Editar</button>
-            <button onClick={() => deleteCarga(carga.id)}>Excluir</button>
+            <p>{carga.descricao} - {carga.dataRecebimento} - {carga.status}</p>
+            <div>
+              <button onClick={() => startEditing(carga)}>Editar</button>
+              <button onClick={() => deleteCarga(carga.id)}>Excluir</button>
+            </div>
           </li>
         ))}
       </ul>

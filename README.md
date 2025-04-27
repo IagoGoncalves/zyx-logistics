@@ -26,7 +26,7 @@ Este sistema foi desenvolvido para gerenciar o controle de cargas recebidas e ex
 1. JSON Server: API falsa (fake API) para armazenar os dados de cargas e checklist no formato JSON.
 
 - **Outras Depedências:**
-1. CSS: Estilização básica usando CSS em módulos.
+1. Sass: Estilização básica usando CSS em módulos.
 2. React Hooks: Para gerenciar o estado e os efeitos colaterais.
 
 ## Como Rodar o projeto
