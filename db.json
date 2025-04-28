@@ -1,22 +1,22 @@
 {
   "cargas": [
     {
-      "id": "78fd",
-      "descricao": "teste",
-      "dataRecebimento": "2025-04-28",
-      "status": "tetwet"
+      "id": "cd4c",
+      "descricao": "Produto 1",
+      "dataRecebimento": "2025-04-27",
+      "status": "Entregue"
     },
     {
-      "id": "34d8",
-      "descricao": "4234324",
-      "dataRecebimento": "2025-04-17",
-      "status": "423rdsgfv"
+      "id": "e99d",
+      "descricao": "Produto 2",
+      "dataRecebimento": "2025-04-27",
+      "status": "Em trânsito"
     },
     {
-      "id": "1f63",
-      "descricao": "234324",
-      "dataRecebimento": "2025-04-24",
-      "status": "234234"
+      "id": "9426",
+      "descricao": "Produto 3",
+      "dataRecebimento": "2025-04-26",
+      "status": "Validação"
     }
   ],
   "checklist": [
@@ -26,16 +26,10 @@
       "status": "Conferido"
     },
     {
-      "id": "806a",
-      "descricao": "ggreg",
-      "status": "6576",
-      "dataRecebimento": ""
-    },
-    {
-      "id": "cf13",
-      "descricao": "teste",
+      "descricao": "Item 1",
       "status": "concluido",
-      "dataRecebimento": ""
+      "dataRecebimento": "",
+      "id": "cf13"
     }
   ]
 }

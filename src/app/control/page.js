@@ -83,7 +83,7 @@ const Home = () => {
         <HeaderList showDate={true}/>
         {cargas.map((carga) => (
           <li key={carga.id}>
-            <p>{carga.descricao} - {carga.dataRecebimento} - {carga.status}</p>
+            <p>{carga.descricao} - {new Date(carga.dataRecebimento).toLocaleDateString('pt-BR')} - {carga.status}</p>
             <div>
               <button onClick={() => startEditing(carga)}>Editar</button>
               <button onClick={() => deleteCarga(carga.id)}>Excluir</button>

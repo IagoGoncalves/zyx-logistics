@@ -42,8 +42,8 @@ cd zyx-logistics
 2. Instale as dependências do projeto:
 npm install
 
-3. Configuração do Backend (json-server):
-npx json-server --watch db.json --port 5000
+3. Iniciar o Backend:
+npm run server
 
 4. Iniciar o Frontend:
 npm run dev
